@@ -1,10 +1,16 @@
-﻿string value = "102";
-int result = 0;
-if (int.TryParse(value, out result))
+﻿string[] pallets = { "B14", "A11", "B12", "A13" };
+
+Console.WriteLine("Sorted...");
+Array.Sort(pallets);
+foreach (var pallet in pallets)
 {
-    Console.WriteLine($"Measurement: {result}");
+    Console.WriteLine($"-- {pallet}");
 }
-else
+
+Console.WriteLine("");
+Console.WriteLine("Reversed...");
+Array.Reverse(pallets);
+foreach (var pallet in pallets)
 {
-    Console.WriteLine("Unable to report the measurement.");
+    Console.WriteLine($"-- {pallet}");
 }
